@@ -16,12 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: SvgPicture.asset("assets/images/instagram.svg"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.chat_outlined),
-          )
-        ],
+        centerTitle: true,
       ),
       body: SafeArea(
         child: <Widget>[
@@ -45,11 +40,6 @@ class _HomeScreenState extends State<HomeScreen> {
             alignment: Alignment.center,
             child: const Text('Page 4'),
           ),
-          Container(
-            color: Colors.amber,
-            alignment: Alignment.center,
-            child: const Text('Page 5'),
-          ),
         ][currentPageIndex],
       ),
       bottomNavigationBar: NavigationBar(
@@ -70,10 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           NavigationDestination(
             icon: Icon(Icons.add),
-            label: '',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.video_call),
             label: '',
           ),
           NavigationDestination(
